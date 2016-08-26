@@ -34,7 +34,7 @@ const getSceneStyle = (props, computedProps) => {
   return style;
 };
 
-export default class AppRoutes extends Component {
+class AppRoutes extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -43,7 +43,7 @@ export default class AppRoutes extends Component {
   render() {
     return (
       <Router getSceneStyle={getSceneStyle}>
-        <Scene key="root">
+        <Scene key="root" hideNavBar>
           <Scene key="Hellojs" component={Hellojs} title="Hellojs" initial />
           <Scene key="Hellojs2" component={Hellojs2} title="Hellojs2" />
         </Scene>
